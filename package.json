@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "h-air.ru",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "static web site hair cat masters Anastasy Zenina",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Vasily Guzov <kinev1979@gmail.com>",
   "dependencies": {
     "gatsby": "^2.24.26",
     "gatsby-image": "^2.4.14",
@@ -21,10 +21,6 @@
   "devDependencies": {
     "prettier": "2.0.5"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
@@ -33,12 +29,5 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
