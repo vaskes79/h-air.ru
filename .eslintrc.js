@@ -1,22 +1,34 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2020": true
+  env: {
+    node: true,
+    browser: true,
+    es2020: true,
+  },
+  extends: ["eslint:recommended", "plugin:react/recommended"],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 11,
-        "sourceType": "module"
+    ecmaVersion: 11,
+    sourceType: "module",
+  },
+  plugins: ["react"],
+  rules: {},
+  settings: {
+    react: {
+      createClass: "createReactClass", 
+      pragma: "React",
+      version: "detect", 
+      flowVersion: "0.53",
     },
-    "plugins": [
-        "react"
+    propWrapperFunctions: [
+      "forbidExtraProps",
+      { property: "freeze", object: "Object" },
+      { property: "myFavoriteWrapper" },
     ],
-    "rules": {
-    }
-};
+    linkComponents: [
+      "Hyperlink",
+      { name: "Link", linkAttribute: "to" },
+    ],
+  },
+}
