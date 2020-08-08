@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: `http://localhost:1348`,
         contentTypes: [`job`],
         queryLimit: 1000, // Default to 100
         //If using single types place them in this array.
