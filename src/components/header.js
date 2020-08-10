@@ -32,8 +32,6 @@ const Header = ({ data }) => {
       {photo && <Img fluid={photo} />}
       {content && <p>{content}</p>}
       {social && <Social data={social} />}
-
-      {/*<pre>{JSON.stringify(data, null, 2)}</pre>*/}
     </header>
   )
 }
@@ -41,9 +39,5 @@ const Header = ({ data }) => {
 Header.propTypes = {
   data: PropTypes.any,
 }
-
-// Header.defaultProps = {
-//   siteTitle: ``,
-// }
 
 export default Header
