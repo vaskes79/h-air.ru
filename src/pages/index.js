@@ -13,17 +13,11 @@ const queryAbout = graphql`
         }
         content
         certificates {
-          formats {
-            large {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
+          id
+          url
         }
         feature {
+          id
           title
         }
         fullname {

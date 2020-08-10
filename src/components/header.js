@@ -1,6 +1,12 @@
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import React from "react"
+import Certificate from "./certificate"
+import Title from "./title"
+import Fullname from "./fullname"
+import Contacts from "./contacts"
+import Fuature from "./feature"
+import Social from "./social"
 
 const Header = ({ data }) => {
   const {
@@ -9,32 +15,24 @@ const Header = ({ data }) => {
       childImageSharp: { fluid: photo },
     },
     content,
-    fullname: { lastname, name },
-    contacts: { email, phone },
-    social,
+    fullname,
+    contacts,
     feature,
+    social,
     certificates,
   } = data
 
   return (
     <header>
-      <h1>{title}</h1>
-      <h2>
-        {name} {lastname}
-      </h2>
-      {/* Contacts */}
-      <ul>
-        <li>{email}</li>
-        <li>{phone}</li>
-      </ul>
-      {/* social */}
-      <pre>{JSON.stringify(social, null, 2)}</pre>
-      {/* feature */}
-      <pre>{JSON.stringify(feature, null, 2)}</pre>
-      {/* certificates */}
-      <pre>{JSON.stringify(certificates, null, 2)}</pre>
-      <Img fluid={photo} />
-      <p>{content}</p>
+      {title && <Title data={title} />}
+      {fullname && <Fullname data={fullname} />}
+      {contacts && <Contacts data={contacts} />}
+      {feature && <Fuature data={feature} />}
+      {certificates && <Certificate data={certificates} />}
+      {photo && <Img fluid={photo} />}
+      {content && <p>{content}</p>}
+      {social && <Social data={social} />}
+
       {/*<pre>{JSON.stringify(data, null, 2)}</pre>*/}
     </header>
   )

@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -29,6 +30,10 @@ const Image = ({ fluid }) => {
   return (
     <Img fluid={fluid ? fluid : data.placeholderImage.childImageSharp.fluid} />
   )
+}
+
+Image.propTypes = {
+  fluid: PropTypes.any,
 }
 
 export default Image
