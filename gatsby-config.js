@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1348`,
+        apiURL: `https://h-air.herokuapp.com`,
         singleTypes: [`about`],
         contentTypes: [`job`],
         queryLimit: 1000,
