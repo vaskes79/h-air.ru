@@ -1,10 +1,12 @@
-import PropTypes from "prop-types"
-// import { Link } from "gatsby"
 import React from "react"
+import PropTypes from "prop-types"
+import InfoIcon from "@material-ui/icons/Info"
 
 const Nav = props => (
   <nav {...props}>
-    <button onClick={props.handelOpen}>обо мне</button>
+    <button onClick={props.handelOpen}>
+      обо мне <InfoIcon />
+    </button>
   </nav>
 )
 
