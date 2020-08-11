@@ -4,12 +4,29 @@
   height: 5em;
   left: 0;
   line-height: 4em;
-  padding: 0 1.5em;
   position: fixed;
   user-select: none;
   width: 100%;
   z-index: 10002;
-  padding: 0 1.5em;
+}
+
+.header-content {
+  width: 100%;
+  min-height: calc(100vh - 4em);
+  background: gray;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transform: translateY(120vh);
+  transition: transform cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s,
+    opacity cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.6s;
+}
+
+.header-content--active {
+  position: absolute;
+  opacity: 1;
+  transform: translateY(0vh);
 }
 
 .header-title {
@@ -29,4 +46,19 @@
   text-transform: uppercase;
   line-height: 3.283em;
   letter-spacing: 0.334em;
+}
+
+.header-content img {
+  width: 100%;
+  height: 0;
+}
+
+.header-content--active img {
+  height: auto;
+}
+
+.header-container {
+  display: flex;
+  padding: 0 1.5em;
+  justify-content: space-between;
 }

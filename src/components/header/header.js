@@ -1,8 +1,9 @@
-import Img from "gatsby-image"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
-import React from "react"
+import Img from "gatsby-image"
 import Certificate from "../certificate"
 import Title from "./title"
+import Nav from "./nav"
 import Fullname from "../fullname"
 import Contacts from "../contacts"
 import Fuature from "../feature"
@@ -23,19 +24,28 @@ const Header = ({ data }) => {
     certificates,
   } = data
 
+  const [isOpen, setOpenStatus] = useState(false)
+
   return (
-    <header className="header">
-      {title && <Title className="header-title" data={title} />}
-      {/*
-      {fullname && <Fullname data={fullname} />}
-      {contacts && <Contacts data={contacts} />}
-      {feature && <Fuature data={feature} />}
-      {certificates && <Certificate data={certificates} />}
-      {photo && <Img fluid={photo} />}
-      {content && <p>{content}</p>}
-      {social && <Social data={social} />}
-      */}
-    </header>
+    <>
+      <section
+        className={`header-content ${isOpen ? "header-content--active" : ""}`}
+      >
+        {fullname && <Fullname data={fullname} />}
+        {contacts && <Contacts data={contacts} />}
+        {feature && <Fuature data={feature} />}
+        {social && <Social data={social} />}
+        {content && <p>{content}</p>}
+        {certificates && <Certificate data={certificates} />}
+        {/*photo && <Img fluid={photo} />*/}
+      </section>
+      <header className="header">
+        <div className="header-container">
+          {title && <Title className="header-title" data={title} />}
+          <Nav handelOpen={() => setOpenStatus(!isOpen)} />
+        </div>
+      </header>
+    </>
   )
 }
 
