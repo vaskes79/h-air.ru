@@ -5,7 +5,7 @@ const Certificate = ({ data }) => {
   const images = data.map(({ id, url }) => {
     return (
       <li key={`cert-img-${id}`}>
-        <img src={url} />
+        <img src={`http://localhost:1348${url}`} />
       </li>
     )
   })
