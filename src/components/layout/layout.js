@@ -1,18 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Header from "./header"
+import Header from "../header"
+import "./reset.css"
 import "./layout.css"
 
 const Layout = ({ children, aboutData }) => {
   return (
     <>
       <Header data={aboutData} />
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}
-        {` `}
-        <a href="https://h-air.ru">h-air.ru</a>
-      </footer>
     </>
   )
 }

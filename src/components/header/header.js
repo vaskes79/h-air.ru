@@ -1,12 +1,13 @@
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import React from "react"
-import Certificate from "./certificate"
+import Certificate from "../certificate"
 import Title from "./title"
-import Fullname from "./fullname"
-import Contacts from "./contacts"
-import Fuature from "./feature"
-import Social from "./social"
+import Fullname from "../fullname"
+import Contacts from "../contacts"
+import Fuature from "../feature"
+import Social from "../social"
+import "./header.css"
 
 const Header = ({ data }) => {
   const {
@@ -23,8 +24,9 @@ const Header = ({ data }) => {
   } = data
 
   return (
-    <header>
-      {title && <Title data={title} />}
+    <header className="header">
+      {title && <Title className="header-title" data={title} />}
+      {/*
       {fullname && <Fullname data={fullname} />}
       {contacts && <Contacts data={contacts} />}
       {feature && <Fuature data={feature} />}
@@ -32,6 +34,7 @@ const Header = ({ data }) => {
       {photo && <Img fluid={photo} />}
       {content && <p>{content}</p>}
       {social && <Social data={social} />}
+      */}
     </header>
   )
 }

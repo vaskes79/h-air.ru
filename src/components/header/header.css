@@ -1,0 +1,32 @@
+.header {
+  background: #1f2224;
+  bottom: -1em;
+  height: 5em;
+  left: 0;
+  line-height: 4em;
+  padding: 0 1.5em;
+  position: fixed;
+  user-select: none;
+  width: 100%;
+  z-index: 10002;
+  padding: 0 1.5em;
+}
+
+.header-title {
+  color: #a0a0a1;
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1;
+  text-transform: lowercase;
+  margin: 0;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.header-title strong {
+  color: #ffffff;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 3.283em;
+  letter-spacing: 0.334em;
+}
