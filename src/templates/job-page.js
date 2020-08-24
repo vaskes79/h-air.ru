@@ -6,7 +6,7 @@ const JobPage = ({ data }) => <pre>{JSON.stringify(data, null, 4)}</pre>;
 
 export const query = graphql`
   query JobQuery($id: String!) {
-    strapiJob(id: { eq: $id }) {
+    job: strapiJob(id: { eq: $id }) {
       title
       slug
       youtube
