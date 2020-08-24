@@ -1,0 +1,8 @@
+.Thumb {
+  width: 100px;
+  display: inline-block;
+}
+
+.Thumb img {
+  max-width: 100%;
+}

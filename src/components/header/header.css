@@ -13,6 +13,7 @@
 .header-content {
   width: 100%;
   min-height: calc(100vh - 4em);
+  padding-bottom: 4em;
   background: gray;
   position: fixed;
   opacity: 0;
