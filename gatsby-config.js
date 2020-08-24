@@ -5,29 +5,6 @@ module.exports = {
     author: `Vasily Guzov`,
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-prettier-eslint",
-      options: {
-        prettier: {
-          patterns: [
-            // the pattern "**/*.{js,jsx,ts,tsx}" is not used because we will rely on `eslint --fix`
-            "**/*.{css,scss,less}",
-            "**/*.{json,json5}",
-            "**/*.{graphql}",
-            "**/*.{md,mdx}",
-            "**/*.{html}",
-            "**/*.{yaml,yml}",
-          ],
-        },
-        eslint: {
-          patterns: "**/*.{js,jsx,ts,tsx}",
-          customOptions: {
-            fix: true,
-            cache: true,
-          },
-        },
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -42,15 +19,9 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `http://localhost:1348`,
+        singleTypes: [`about`],
         contentTypes: [`job`],
-        queryLimit: 1000, // Default to 100
-        //If using single types place them in this array.
-        // singleTypes: [`home-page`, `contact`],
-        // Possibility to login with a strapi user, when content types are not publically available (optional).
-        // loginData: {
-        //   identifier: "",
-        //   password: "",
-        // },
+        queryLimit: 1000,
       },
     },
     {

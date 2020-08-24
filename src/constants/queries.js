@@ -1,8 +1,4 @@
-import React from "react";
-import Layout from "../components/layout";
-import { graphql, useStaticQuery } from "gatsby";
-
-const queryAbout = graphql`
+export const queryAbout = `
   {
     allStrapiAbout {
       nodes {
@@ -13,21 +9,17 @@ const queryAbout = graphql`
         }
         content
         certificates {
-          id
-          alternativeText
-          caption
-          url
           formats {
             large {
-              publicURL
-            }
-            thumbnail {
-              publicURL
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
         feature {
-          id
           title
         }
         fullname {
@@ -51,16 +43,4 @@ const queryAbout = graphql`
       }
     }
   }
-`;
-
-const IndexPage = () => {
-  const aboutData = useStaticQuery(queryAbout);
-
-  return (
-    <Layout aboutData={aboutData.allStrapiAbout.nodes[0]}>
-      <h1>Content</h1>
-    </Layout>
-  );
-};
-
-export default IndexPage;
+`
