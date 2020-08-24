@@ -14,7 +14,17 @@ const queryAbout = graphql`
         content
         certificates {
           id
+          alternativeText
+          caption
           url
+          formats {
+            large {
+              publicURL
+            }
+            thumbnail {
+              publicURL
+            }
+          }
         }
         feature {
           id
