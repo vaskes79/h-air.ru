@@ -1,14 +1,14 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import Img from "gatsby-image"
-import Certificate from "../certificate"
-import Title from "./title"
-import Nav from "./nav"
-import Fullname from "../fullname"
-import Contacts from "../contacts"
-import Fuature from "../feature"
-import Social from "../social"
-import "./header.css"
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import Img from "gatsby-image";
+import Certificate from "../certificate";
+import Title from "./title";
+import Nav from "./nav";
+import Fullname from "../fullname";
+import Contacts from "../contacts";
+import Fuature from "../feature";
+import Social from "../social";
+import "./header.css";
 
 const Header = ({ data }) => {
   const {
@@ -22,9 +22,9 @@ const Header = ({ data }) => {
     feature,
     social,
     certificates,
-  } = data
+  } = data;
 
-  const [isOpen, setOpenStatus] = useState(false)
+  const [isOpen, setOpenStatus] = useState(false);
 
   return (
     <>
@@ -41,16 +41,16 @@ const Header = ({ data }) => {
       </section>
       <header className="header">
         <div className="header-container">
-          {title && <Title className="header-title" data={title} />}
+          {title && <Title className="header-title" name={title} />}
           <Nav handelOpen={() => setOpenStatus(!isOpen)} />
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
 Header.propTypes = {
   data: PropTypes.any,
-}
+};
 
-export default Header
+export default Header;

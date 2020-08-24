@@ -1,17 +1,17 @@
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
-import React from "react"
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
+import React from "react";
 
-const Title = ({ data, ...props }) => (
+const Title = ({ name, ...props }) => (
   <h1>
     <Link {...props} to="/">
-      <strong>{data}</strong>
+      <strong>{name}</strong>
     </Link>
   </h1>
-)
+);
 
 Title.propTypes = {
-  data: PropTypes.array,
-}
+  name: PropTypes.string,
+};
 
-export default Title
+export default Title;

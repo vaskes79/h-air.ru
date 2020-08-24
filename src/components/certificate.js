@@ -1,18 +1,11 @@
 import PropTypes from "prop-types"
 import React from "react"
+import Gallery from "./gallery"
 
 const Certificate = ({ data }) => {
-  const images = data.map(({ id, url }) => {
-    return (
-      <li key={`cert-img-${id}`}>
-        <img src={`http://localhost:1348${url}`} />
-      </li>
-    )
-  })
-
   return (
     <>
-      <ul>{images}</ul>
+      <Gallery photos={data} />
     </>
   )
 }
