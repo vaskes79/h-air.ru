@@ -1,0 +1,16 @@
+{
+  "libs": [
+    "browser",
+    "react"
+  ],
+  "loadEagerly": [],
+  "dontLoad": [],
+  "plugins": {
+    "react": {},
+    "node": {},
+    "modules": {},
+    "es_modules": {},
+    "requirejs": {},
+    "commonjs": {}
+  }
+}

@@ -55,7 +55,6 @@ const queryAbout = graphql`
 
 const IndexPage = () => {
   const aboutData = useStaticQuery(queryAbout);
-
   return (
     <Layout aboutData={aboutData.allStrapiAbout.nodes[0]}>
       <h1>Content</h1>
